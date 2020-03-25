@@ -1,0 +1,85 @@
+EESchema Schematic File Version 4
+LIBS:controlBoard_rev0401-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L othersSMD:CH340G U?
+U 1 1 5C495644
+P 5200 2750
+F 0 "U?" H 5225 3365 50  0000 C CNN
+F 1 "CH340G" H 5225 3274 50  0000 C CNN
+F 2 "MODULE" H 5350 2750 50  0001 C CNN
+F 3 "DOCUMENTATION" H 5350 2750 50  0001 C CNN
+	1    5200 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:USB_OTG J?
+U 1 1 5C4956BE
+P 2150 2550
+F 0 "J?" H 2205 3017 50  0000 C CNN
+F 1 "USB_OTG" H 2205 2926 50  0000 C CNN
+F 2 "" H 2300 2500 50  0001 C CNN
+F 3 " ~" H 2300 2500 50  0001 C CNN
+	1    2150 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J?
+U 1 1 5C4B0712
+P 8400 2750
+F 0 "J?" H 8450 3067 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 8450 2976 50  0000 C CNN
+F 2 "" H 8400 2750 50  0001 C CNN
+F 3 "~" H 8400 2750 50  0001 C CNN
+	1    8400 2750
+	1    0    0    -1  
+$EndComp
+Text GLabel 8000 2650 0    59   Input ~ 0
+MISO
+Text GLabel 8000 2750 0    59   Input ~ 0
+SCK
+Text GLabel 8000 2850 0    59   Input ~ 0
+RST
+Text GLabel 9000 2650 2    59   Input ~ 0
+3.3V_ARD
+Text GLabel 9000 2750 2    59   Input ~ 0
+MOSI
+$Comp
+L power:GND #PWR?
+U 1 1 5C4B07A6
+P 9000 2900
+F 0 "#PWR?" H 9000 2650 50  0001 C CNN
+F 1 "GND" H 9005 2727 50  0000 C CNN
+F 2 "" H 9000 2900 50  0001 C CNN
+F 3 "" H 9000 2900 50  0001 C CNN
+	1    9000 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 2650 8000 2650
+Wire Wire Line
+	8200 2750 8000 2750
+Wire Wire Line
+	8200 2850 8000 2850
+Wire Wire Line
+	8700 2650 9000 2650
+Wire Wire Line
+	9000 2750 8700 2750
+Wire Wire Line
+	8700 2850 9000 2850
+Wire Wire Line
+	9000 2850 9000 2900
+$EndSCHEMATC
