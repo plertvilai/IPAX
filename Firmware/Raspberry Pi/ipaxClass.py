@@ -15,7 +15,7 @@ import RPi.GPIO as GPIO
 import datetime as dt
 
 #------------------------pin assignment------------------------------#
-#for PUE, on-board led on pin 21 is controlled by connectArduino.py instead
+#for IPAX, on-board led on pin 21 is controlled by connectArduino.py instead
 
 button_pin = 10 #for push button
 fan_pin = 27 #for fan control; not used in PUE v4.0

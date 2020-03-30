@@ -1,11 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# Connector_Conn_01x01_Male
+# Connector:Conn_01x01_Male
 #
-DEF Connector_Conn_01x01_Male J 0 40 Y N 1 F N
+DEF Connector:Conn_01x01_Male J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Conn_01x01_Male" 0 -100 50 H V C CNN
+F1 "Connector:Conn_01x01_Male" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -18,11 +18,11 @@ X Pin_1 1 200 0 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Conn_01x03_Female
+# Connector:Conn_01x03_Female
 #
-DEF Connector_Conn_01x03_Female J 0 40 Y N 1 F N
+DEF Connector:Conn_01x03_Female J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Conn_01x03_Female" 0 -200 50 H V C CNN
+F1 "Connector:Conn_01x03_Female" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -41,11 +41,11 @@ X Pin_3 3 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Conn_01x04_Female
+# Connector:Conn_01x04_Female
 #
-DEF Connector_Conn_01x04_Female J 0 40 Y N 1 F N
+DEF Connector:Conn_01x04_Female J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Conn_01x04_Female" 0 -300 50 H V C CNN
+F1 "Connector:Conn_01x04_Female" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -67,11 +67,11 @@ X Pin_4 4 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Conn_01x04_Male
+# Connector:Conn_01x04_Male
 #
-DEF Connector_Conn_01x04_Male J 0 40 Y N 1 F N
+DEF Connector:Conn_01x04_Male J 0 40 Y N 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "Connector_Conn_01x04_Male" 0 -300 50 H V C CNN
+F1 "Connector:Conn_01x04_Male" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -93,11 +93,11 @@ X Pin_4 4 200 -200 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Conn_01x06_Female
+# Connector:Conn_01x06_Female
 #
-DEF Connector_Conn_01x06_Female J 0 40 Y N 1 F N
+DEF Connector:Conn_01x06_Female J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "Connector_Conn_01x06_Female" 0 -400 50 H V C CNN
+F1 "Connector:Conn_01x06_Female" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -125,11 +125,11 @@ X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Conn_01x06_Male
+# Connector:Conn_01x06_Male
 #
-DEF Connector_Conn_01x06_Male J 0 40 Y N 1 F N
+DEF Connector:Conn_01x06_Male J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "Connector_Conn_01x06_Male" 0 -400 50 H V C CNN
+F1 "Connector:Conn_01x06_Male" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -157,11 +157,11 @@ X Pin_6 6 200 -300 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_CP
+# Device:CP
 #
-DEF Device_CP C 0 10 N Y 1 F N
+DEF Device:CP C 0 10 N Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "Device_CP" 25 -100 50 H V L CNN
+F1 "Device:CP" 25 -100 50 H V L CNN
 F2 "" 38 -150 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -180,11 +180,11 @@ X ~ 2 0 -150 110 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_D_ALT
+# Device:D_ALT
 #
-DEF Device_D_ALT D 0 40 N N 1 F N
+DEF Device:D_ALT D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device_D_ALT" 0 -100 50 H V C CNN
+F1 "Device:D_ALT" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -202,11 +202,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_D_TVS_ALT
+# Device:D_TVS_ALT
 #
-DEF Device_D_TVS_ALT D 0 40 N N 1 F N
+DEF Device:D_TVS_ALT D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device_D_TVS_ALT" 0 -100 50 H V C CNN
+F1 "Device:D_TVS_ALT" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -225,11 +225,11 @@ X A2 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Q_NMOS_GSD
+# Device:Q_NMOS_GSD
 #
-DEF Device_Q_NMOS_GSD Q 0 0 Y N 1 F N
+DEF Device:Q_NMOS_GSD Q 0 0 Y N 1 F N
 F0 "Q" 200 50 50 H V L CNN
-F1 "Device_Q_NMOS_GSD" 200 -50 50 H V L CNN
+F1 "Device:Q_NMOS_GSD" 200 -50 50 H V L CNN
 F2 "" 200 100 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -257,11 +257,11 @@ X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Q_PMOS_GSD
+# Device:Q_PMOS_GSD
 #
-DEF Device_Q_PMOS_GSD Q 0 0 Y N 1 F N
+DEF Device:Q_PMOS_GSD Q 0 0 Y N 1 F N
 F0 "Q" 200 50 50 H V L CNN
-F1 "Device_Q_PMOS_GSD" 200 -50 50 H V L CNN
+F1 "Device:Q_PMOS_GSD" 200 -50 50 H V L CNN
 F2 "" 200 100 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -289,11 +289,11 @@ X D 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_R
+# Device:R
 #
-DEF Device_R R 0 0 N Y 1 F N
+DEF Device:R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Device_R" 0 0 50 V V C CNN
+F1 "Device:R" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -306,11 +306,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# othersSMD_MAX9938
+# othersSMD:MAX9938
 #
-DEF othersSMD_MAX9938 U 0 40 Y Y 1 F N
+DEF othersSMD:MAX9938 U 0 40 Y Y 1 F N
 F0 "U" -50 500 50 H V C CNN
-F1 "othersSMD_MAX9938" -50 400 50 H V C CNN
+F1 "othersSMD:MAX9938" -50 400 50 H V C CNN
 F2 "MODULE" -50 150 50 H I C CNN
 F3 "DOCUMENTATION" -50 150 50 H I C CNN
 DRAW
@@ -323,11 +323,11 @@ X RS+ 5 -600 200 300 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# power_GND
+# power:GND
 #
-DEF power_GND #PWR 0 0 Y Y 1 F P
+DEF power:GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power_GND" 0 -150 50 H V C CNN
+F1 "power:GND" 0 -150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -336,11 +336,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# transistors_NMOS
+# transistors:NMOS
 #
-DEF transistors_NMOS Q 0 0 Y N 1 F N
+DEF transistors:NMOS Q 0 0 Y N 1 F N
 F0 "Q" 200 75 50 H V L CNN
-F1 "transistors_NMOS" 200 0 50 H V L CNN
+F1 "transistors:NMOS" 200 0 50 H V L CNN
 F2 "Package_SON:Diodes_PowerDI3333-8" 200 -75 50 H I L CIN
 F3 "" 0 0 50 H I L CNN
 ALIAS TP0610L VP0610L
@@ -374,11 +374,11 @@ X D 5 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# transistors_PMOS
+# transistors:PMOS
 #
-DEF transistors_PMOS Q 0 0 Y N 1 F N
+DEF transistors:PMOS Q 0 0 Y N 1 F N
 F0 "Q" 200 75 50 H V L CNN
-F1 "transistors_PMOS" 200 0 50 H V L CNN
+F1 "transistors:PMOS" 200 0 50 H V L CNN
 F2 "Package_SON:Diodes_PowerDI3333-8" 200 -75 50 H I L CIN
 F3 "" 0 0 50 H I L CNN
 ALIAS VP0610T BSS84 NTR2101P BSS83P Si2319CDS IRLML6402

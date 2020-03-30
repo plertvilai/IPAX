@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
 LIBS:controlBoard_rev0401-cache
-LIBS:led_driver-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -106,9 +105,9 @@ F 3 "" H 7400 1900 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 7300 6850 0    138  ~ 28
-PUE Control Board
+IPAX Control Board
 Text Notes 8750 7650 0    60   ~ 12
-March 3, 2019
+May 15, 2019
 $Sheet
 S 7250 4500 1650 1000
 U 5988C2E9
@@ -574,7 +573,7 @@ Wire Wire Line
 Wire Wire Line
 	4900 3550 4800 3550
 Text Notes 9150 7350 0    98   ~ 20
-Rev04.b
+Rev04.c
 Text Notes 8050 7500 0    60   ~ 12
 P. Lertvilai
 Text GLabel 3500 5250 2    60   Input ~ 0

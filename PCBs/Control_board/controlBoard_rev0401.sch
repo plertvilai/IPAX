@@ -107,7 +107,7 @@ $EndComp
 Text Notes 7300 6850 0    138  ~ 28
 IPAX Control Board
 Text Notes 8750 7650 0    60   ~ 12
-May 15, 2019
+Revised March 2020 for Publication
 $Sheet
 S 7250 4500 1650 1000
 U 5988C2E9
@@ -669,7 +669,7 @@ Wire Wire Line
 Wire Wire Line
 	2700 3800 2700 3950
 $Comp
-L arduinoBased:FTDI_Basic U8
+L controlBoard_rev0401-rescue:FTDI_Basic-arduinoBased U8
 U 1 1 5C7DE2F4
 P 6700 6350
 F 0 "U8" H 6728 6396 50  0000 L CNN
