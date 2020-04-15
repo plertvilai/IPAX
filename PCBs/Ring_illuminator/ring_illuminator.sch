@@ -26,14 +26,25 @@ F 3 "~" H 2000 1000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text GLabel 1100 1000 0    50   Input ~ 0
-VLED1
+LED1+
 Text GLabel 1150 1500 0    50   Input ~ 0
-PGND
+LED1-
 $Comp
 L Device:LED D2
 U 1 1 5CD5F277
+P 3350 2250
+F 0 "D2" H 3341 2466 50  0000 C CNN
+F 1 "LED" H 3341 2375 50  0000 C CNN
+F 2 "led:CREE_XTE_Carclo_10mm" H 3350 2250 50  0001 C CNN
+F 3 "~" H 3350 2250 50  0001 C CNN
+	1    3350 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5CD5F48B
 P 2500 1000
-F 0 "D2" H 2491 1216 50  0000 C CNN
+F 0 "D3" H 2491 1216 50  0000 C CNN
 F 1 "LED" H 2491 1125 50  0000 C CNN
 F 2 "led:CREE_XTE_Carclo_10mm" H 2500 1000 50  0001 C CNN
 F 3 "~" H 2500 1000 50  0001 C CNN
@@ -41,36 +52,25 @@ F 3 "~" H 2500 1000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:LED D3
-U 1 1 5CD5F48B
-P 2950 1000
-F 0 "D3" H 2941 1216 50  0000 C CNN
-F 1 "LED" H 2941 1125 50  0000 C CNN
-F 2 "led:CREE_XTE_Carclo_10mm" H 2950 1000 50  0001 C CNN
-F 3 "~" H 2950 1000 50  0001 C CNN
-	1    2950 1000
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:LED D4
 U 1 1 5CD5F904
-P 3450 1000
-F 0 "D4" H 3441 1216 50  0000 C CNN
-F 1 "LED" H 3441 1125 50  0000 C CNN
-F 2 "led:CREE_XTE_Carclo_10mm" H 3450 1000 50  0001 C CNN
-F 3 "~" H 3450 1000 50  0001 C CNN
-	1    3450 1000
+P 3800 2250
+F 0 "D4" H 3791 2466 50  0000 C CNN
+F 1 "LED" H 3791 2375 50  0000 C CNN
+F 2 "led:CREE_XTE_Carclo_10mm" H 3800 2250 50  0001 C CNN
+F 3 "~" H 3800 2250 50  0001 C CNN
+	1    3800 2250
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D5
 U 1 1 5CD6009E
-P 3950 1000
-F 0 "D5" H 3941 1216 50  0000 C CNN
-F 1 "LED" H 3941 1125 50  0000 C CNN
-F 2 "led:CREE_XTE_Carclo_10mm" H 3950 1000 50  0001 C CNN
-F 3 "~" H 3950 1000 50  0001 C CNN
-	1    3950 1000
+P 2950 1000
+F 0 "D5" H 2941 1216 50  0000 C CNN
+F 1 "LED" H 2941 1125 50  0000 C CNN
+F 2 "led:CREE_XTE_Carclo_10mm" H 2950 1000 50  0001 C CNN
+F 3 "~" H 2950 1000 50  0001 C CNN
+	1    2950 1000
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -85,14 +85,25 @@ F 3 "~" H 1950 2250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text GLabel 1050 2250 0    50   Input ~ 0
-VLED2
+LED2+
 Text GLabel 1100 2750 0    50   Input ~ 0
-PGND
+LED2-
 $Comp
 L Device:LED D7
 U 1 1 5CD60EAE
+P 3450 1000
+F 0 "D7" H 3441 1216 50  0000 C CNN
+F 1 "LED" H 3441 1125 50  0000 C CNN
+F 2 "led:CREE_XTE_Carclo_10mm" H 3450 1000 50  0001 C CNN
+F 3 "~" H 3450 1000 50  0001 C CNN
+	1    3450 1000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D8
+U 1 1 5CD60ED4
 P 2400 2250
-F 0 "D7" H 2391 2466 50  0000 C CNN
+F 0 "D8" H 2391 2466 50  0000 C CNN
 F 1 "LED" H 2391 2375 50  0000 C CNN
 F 2 "led:CREE_XTE_Carclo_10mm" H 2400 2250 50  0001 C CNN
 F 3 "~" H 2400 2250 50  0001 C CNN
@@ -100,36 +111,25 @@ F 3 "~" H 2400 2250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:LED D8
-U 1 1 5CD60ED4
-P 2900 2250
-F 0 "D8" H 2891 2466 50  0000 C CNN
-F 1 "LED" H 2891 2375 50  0000 C CNN
-F 2 "led:CREE_XTE_Carclo_10mm" H 2900 2250 50  0001 C CNN
-F 3 "~" H 2900 2250 50  0001 C CNN
-	1    2900 2250
-	-1   0    0    1   
-$EndComp
-$Comp
 L Device:LED D9
 U 1 1 5CD60EFA
-P 3350 2250
-F 0 "D9" H 3341 2466 50  0000 C CNN
-F 1 "LED" H 3341 2375 50  0000 C CNN
-F 2 "led:CREE_XTE_Carclo_10mm" H 3350 2250 50  0001 C CNN
-F 3 "~" H 3350 2250 50  0001 C CNN
-	1    3350 2250
+P 3950 1000
+F 0 "D9" H 3941 1216 50  0000 C CNN
+F 1 "LED" H 3941 1125 50  0000 C CNN
+F 2 "led:CREE_XTE_Carclo_10mm" H 3950 1000 50  0001 C CNN
+F 3 "~" H 3950 1000 50  0001 C CNN
+	1    3950 1000
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:LED D10
 U 1 1 5CD60F20
-P 3800 2250
-F 0 "D10" H 3791 2466 50  0000 C CNN
-F 1 "LED" H 3791 2375 50  0000 C CNN
-F 2 "led:CREE_XTE_Carclo_10mm" H 3800 2250 50  0001 C CNN
-F 3 "~" H 3800 2250 50  0001 C CNN
-	1    3800 2250
+P 2900 2250
+F 0 "D10" H 2891 2466 50  0000 C CNN
+F 1 "LED" H 2891 2375 50  0000 C CNN
+F 2 "led:CREE_XTE_Carclo_10mm" H 2900 2250 50  0001 C CNN
+F 3 "~" H 2900 2250 50  0001 C CNN
+	1    2900 2250
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -144,10 +144,10 @@ F 3 "~" H 7600 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J4
+L Connector:Conn_01x01_Female J5
 U 1 1 5CD702C5
 P 7600 3550
-F 0 "J4" H 7627 3576 50  0000 L CNN
+F 0 "J5" H 7627 3576 50  0000 L CNN
 F 1 "Conn_01x01_Female" H 7627 3485 50  0000 L CNN
 F 2 "myLib:SCREW_4" H 7600 3550 50  0001 C CNN
 F 3 "~" H 7600 3550 50  0001 C CNN
@@ -155,10 +155,10 @@ F 3 "~" H 7600 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J5
+L Connector:Conn_01x01_Female J7
 U 1 1 5CD73747
 P 7600 3850
-F 0 "J5" H 7627 3876 50  0000 L CNN
+F 0 "J7" H 7627 3876 50  0000 L CNN
 F 1 "Conn_01x01_Female" H 7627 3785 50  0000 L CNN
 F 2 "myLib:SCREW_4" H 7600 3850 50  0001 C CNN
 F 3 "~" H 7600 3850 50  0001 C CNN
@@ -166,10 +166,10 @@ F 3 "~" H 7600 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J6
+L Connector:Conn_01x01_Female J9
 U 1 1 5CD76C19
 P 7600 4200
-F 0 "J6" H 7627 4226 50  0000 L CNN
+F 0 "J9" H 7627 4226 50  0000 L CNN
 F 1 "Conn_01x01_Female" H 7627 4135 50  0000 L CNN
 F 2 "myLib:SCREW_4" H 7600 4200 50  0001 C CNN
 F 3 "~" H 7600 4200 50  0001 C CNN
@@ -177,10 +177,10 @@ F 3 "~" H 7600 4200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J7
+L Connector:Conn_01x01_Female J11
 U 1 1 5CD76C1F
 P 7600 4500
-F 0 "J7" H 7627 4526 50  0000 L CNN
+F 0 "J11" H 7627 4526 50  0000 L CNN
 F 1 "Conn_01x01_Female" H 7627 4435 50  0000 L CNN
 F 2 "myLib:SCREW_4" H 7600 4500 50  0001 C CNN
 F 3 "~" H 7600 4500 50  0001 C CNN
@@ -188,10 +188,10 @@ F 3 "~" H 7600 4500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J8
+L Connector:Conn_01x01_Female J4
 U 1 1 5CD7A0E5
 P 9000 3200
-F 0 "J8" H 9027 3226 50  0000 L CNN
+F 0 "J4" H 9027 3226 50  0000 L CNN
 F 1 "Conn_01x01_Female" H 9027 3135 50  0000 L CNN
 F 2 "myLib:SCREW_4" H 9000 3200 50  0001 C CNN
 F 3 "~" H 9000 3200 50  0001 C CNN
@@ -199,10 +199,10 @@ F 3 "~" H 9000 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J9
+L Connector:Conn_01x01_Female J6
 U 1 1 5CD7A0EB
 P 9000 3550
-F 0 "J9" H 9027 3576 50  0000 L CNN
+F 0 "J6" H 9027 3576 50  0000 L CNN
 F 1 "Conn_01x01_Female" H 9027 3485 50  0000 L CNN
 F 2 "myLib:SCREW_4" H 9000 3550 50  0001 C CNN
 F 3 "~" H 9000 3550 50  0001 C CNN
@@ -210,10 +210,10 @@ F 3 "~" H 9000 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J10
+L Connector:Conn_01x01_Female J8
 U 1 1 5CD7A0F1
 P 9000 3850
-F 0 "J10" H 9027 3876 50  0000 L CNN
+F 0 "J8" H 9027 3876 50  0000 L CNN
 F 1 "Conn_01x01_Female" H 9027 3785 50  0000 L CNN
 F 2 "myLib:SCREW_4" H 9000 3850 50  0001 C CNN
 F 3 "~" H 9000 3850 50  0001 C CNN
@@ -221,10 +221,10 @@ F 3 "~" H 9000 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x01_Female J11
+L Connector:Conn_01x01_Female J10
 U 1 1 5CD7A0F7
 P 9000 4200
-F 0 "J11" H 9027 4226 50  0000 L CNN
+F 0 "J10" H 9027 4226 50  0000 L CNN
 F 1 "Conn_01x01_Female" H 9027 4135 50  0000 L CNN
 F 2 "myLib:SCREW_4" H 9000 4200 50  0001 C CNN
 F 3 "~" H 9000 4200 50  0001 C CNN
@@ -242,68 +242,8 @@ F 3 "~" H 9000 4500 50  0001 C CNN
 	1    9000 4500
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_01x01_Male J13
-U 1 1 5CD8840B
-P 8300 1000
-F 0 "J13" H 8406 1178 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 8406 1087 50  0000 C CNN
-F 2 "conn:large_smd_pad" H 8300 1000 50  0001 C CNN
-F 3 "~" H 8300 1000 50  0001 C CNN
-	1    8300 1000
-	1    0    0    -1  
-$EndComp
-Text GLabel 8700 1000 2    50   Input ~ 0
-VLED2
-Wire Wire Line
-	8700 1000 8500 1000
-$Comp
-L Connector:Conn_01x01_Male J15
-U 1 1 5CD8DF3E
-P 9150 1000
-F 0 "J15" H 9256 1178 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 9256 1087 50  0000 C CNN
-F 2 "conn:large_smd_pad" H 9150 1000 50  0001 C CNN
-F 3 "~" H 9150 1000 50  0001 C CNN
-	1    9150 1000
-	1    0    0    -1  
-$EndComp
-Text GLabel 9550 1000 2    50   Input ~ 0
-PGND
-Wire Wire Line
-	9550 1000 9350 1000
-$Comp
-L Connector:Conn_01x01_Male J1
-U 1 1 5CD984EF
-P 8300 1750
-F 0 "J1" H 8406 1928 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 8406 1837 50  0000 C CNN
-F 2 "conn:large_smd_pad" H 8300 1750 50  0001 C CNN
-F 3 "~" H 8300 1750 50  0001 C CNN
-	1    8300 1750
-	1    0    0    -1  
-$EndComp
-Text GLabel 8700 1750 2    50   Input ~ 0
-PGND
-Wire Wire Line
-	8700 1750 8500 1750
-$Comp
-L Connector:Conn_01x01_Male J17
-U 1 1 5CD984FF
-P 9150 1750
-F 0 "J17" H 9256 1928 50  0000 C CNN
-F 1 "Conn_01x01_Male" H 9256 1837 50  0000 C CNN
-F 2 "conn:large_smd_pad" H 9150 1750 50  0001 C CNN
-F 3 "~" H 9150 1750 50  0001 C CNN
-	1    9150 1750
-	1    0    0    -1  
-$EndComp
-Text GLabel 9550 1750 2    50   Input ~ 0
-VLED1
-Wire Wire Line
-	9550 1750 9350 1750
 Text Notes 7800 6900 0    100  ~ 20
-IPAX Ring Illuminator Rev01a
+IPAX Ring Illuminator Rev03a
 Wire Wire Line
 	2150 1000 2350 1000
 Wire Wire Line
@@ -332,8 +272,72 @@ Wire Wire Line
 	1100 2750 3950 2750
 Wire Wire Line
 	1050 2250 1800 2250
-Text Notes 8350 7300 0    100  ~ 0
-Revised March 2020 for Publication
-Text Notes 8600 7600 0    100  ~ 0
+Text Notes 8300 7350 0    100  ~ 0
+For FR-4 Two-sided PCB
+Text Notes 8500 7500 0    49   ~ 0
+Revised for Publication March 10, 2020
+Text Notes 8850 7750 0    100  ~ 0
 P. Lertvilai
+Text Notes 8100 3050 0    100  ~ 0
+Screws
+Text GLabel 6050 1950 0    50   Input ~ 0
+LED1+
+Text GLabel 6050 2100 0    50   Input ~ 0
+LED1-
+Text GLabel 6050 2250 0    50   Input ~ 0
+LED2+
+Text GLabel 6050 2400 0    50   Input ~ 0
+LED2-
+$Comp
+L Connector:Conn_01x01_Female J1
+U 1 1 5E73C54E
+P 6350 1950
+F 0 "J1" H 6377 1976 50  0000 L CNN
+F 1 "Conn_01x01_Female" H 6377 1885 50  0000 L CNN
+F 2 "conn:large_smd_pad" H 6350 1950 50  0001 C CNN
+F 3 "~" H 6350 1950 50  0001 C CNN
+	1    6350 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J2
+U 1 1 5E73C5D0
+P 6350 2100
+F 0 "J2" H 6377 2126 50  0000 L CNN
+F 1 "Conn_01x01_Female" H 6377 2035 50  0000 L CNN
+F 2 "conn:large_smd_pad" H 6350 2100 50  0001 C CNN
+F 3 "~" H 6350 2100 50  0001 C CNN
+	1    6350 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J13
+U 1 1 5E73C610
+P 6350 2250
+F 0 "J13" H 6377 2276 50  0000 L CNN
+F 1 "Conn_01x01_Female" H 6377 2185 50  0000 L CNN
+F 2 "conn:large_smd_pad" H 6350 2250 50  0001 C CNN
+F 3 "~" H 6350 2250 50  0001 C CNN
+	1    6350 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Female J14
+U 1 1 5E73C652
+P 6350 2400
+F 0 "J14" H 6377 2426 50  0000 L CNN
+F 1 "Conn_01x01_Female" H 6377 2335 50  0000 L CNN
+F 2 "conn:large_smd_pad" H 6350 2400 50  0001 C CNN
+F 3 "~" H 6350 2400 50  0001 C CNN
+	1    6350 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 1950 6150 1950
+Wire Wire Line
+	6150 2100 6050 2100
+Wire Wire Line
+	6150 2250 6050 2250
+Wire Wire Line
+	6150 2400 6050 2400
 $EndSCHEMATC

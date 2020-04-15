@@ -1,10 +1,10 @@
 EESchema Schematic File Version 4
-LIBS:controlBoard_rev0401-cache
+LIBS:controlBoard_rev05a-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 5
+Sheet 5 5
 Title ""
 Date ""
 Rev ""
@@ -71,6 +71,7 @@ F 0 "R28" H 6118 2296 50  0000 L CNN
 F 1 "10k" H 6118 2205 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 6090 2240 50  0001 C CNN
 F 3 "~" H 6050 2250 50  0001 C CNN
+F 4 "C25804" H 0   0   50  0001 C CNN "LCSC"
 	1    6050 2250
 	1    0    0    -1  
 $EndComp
@@ -93,6 +94,7 @@ F 0 "R29" H 6418 2296 50  0000 L CNN
 F 1 "10k" H 6418 2205 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 6390 2240 50  0001 C CNN
 F 3 "~" H 6350 2250 50  0001 C CNN
+F 4 "C25804" H 0   0   50  0001 C CNN "LCSC"
 	1    6350 2250
 	1    0    0    -1  
 $EndComp
@@ -141,6 +143,7 @@ F 0 "R30" H 9718 2146 50  0000 L CNN
 F 1 "10k" H 9718 2055 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 9690 2090 50  0001 C CNN
 F 3 "~" H 9650 2100 50  0001 C CNN
+F 4 "C25804" H 0   0   50  0001 C CNN "LCSC"
 	1    9650 2100
 	1    0    0    -1  
 $EndComp
@@ -192,6 +195,7 @@ F 0 "C12" H 7265 2096 50  0000 L CNN
 F 1 "1uF" H 7265 2005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 7188 1900 50  0001 C CNN
 F 3 "~" H 7150 2050 50  0001 C CNN
+F 4 "C15849" H 0   0   50  0001 C CNN "LCSC"
 	1    7150 2050
 	1    0    0    -1  
 $EndComp
@@ -203,6 +207,7 @@ F 0 "C11" H 6965 2096 50  0000 L CNN
 F 1 "10nF" H 6965 2005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6888 1900 50  0001 C CNN
 F 3 "~" H 6850 2050 50  0001 C CNN
+F 4 "C57112" H 0   0   50  0001 C CNN "LCSC"
 	1    6850 2050
 	1    0    0    -1  
 $EndComp
@@ -240,6 +245,7 @@ F 0 "C16" H 10615 2096 50  0000 L CNN
 F 1 "1uF" H 10615 2005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 10538 1900 50  0001 C CNN
 F 3 "~" H 10500 2050 50  0001 C CNN
+F 4 "C15849" H 0   0   50  0001 C CNN "LCSC"
 	1    10500 2050
 	1    0    0    -1  
 $EndComp
@@ -251,6 +257,7 @@ F 0 "C15" H 10315 2096 50  0000 L CNN
 F 1 "10nF" H 10315 2005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 10238 1900 50  0001 C CNN
 F 3 "~" H 10200 2050 50  0001 C CNN
+F 4 "C57112" H 0   0   50  0001 C CNN "LCSC"
 	1    10200 2050
 	1    0    0    -1  
 $EndComp
@@ -290,6 +297,7 @@ F 0 "C10" H 6265 4696 50  0000 L CNN
 F 1 "1uF" H 6265 4605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6188 4500 50  0001 C CNN
 F 3 "~" H 6150 4650 50  0001 C CNN
+F 4 "C15849" H 0   0   50  0001 C CNN "LCSC"
 	1    6150 4650
 	1    0    0    -1  
 $EndComp
@@ -301,6 +309,7 @@ F 0 "C7" H 5965 4696 50  0000 L CNN
 F 1 "10nF" H 5965 4605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5888 4500 50  0001 C CNN
 F 3 "~" H 5850 4650 50  0001 C CNN
+F 4 "C57112" H 0   0   50  0001 C CNN "LCSC"
 	1    5850 4650
 	1    0    0    -1  
 $EndComp
@@ -336,7 +345,7 @@ U 1 1 5C48DB46
 P 4850 4450
 F 0 "J6" H 4956 4728 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 4956 4637 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 4850 4450 50  0001 C CNN
+F 2 "conn:conn_1x04_1.5mm" H 4850 4450 50  0001 C CNN
 F 3 "~" H 4850 4450 50  0001 C CNN
 	1    4850 4450
 	1    0    0    -1  
@@ -365,6 +374,7 @@ F 0 "C14" H 8615 4696 50  0000 L CNN
 F 1 "1uF" H 8615 4605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8538 4500 50  0001 C CNN
 F 3 "~" H 8500 4650 50  0001 C CNN
+F 4 "C15849" H 0   0   50  0001 C CNN "LCSC"
 	1    8500 4650
 	1    0    0    -1  
 $EndComp
@@ -376,6 +386,7 @@ F 0 "C13" H 8315 4696 50  0000 L CNN
 F 1 "10nF" H 8315 4605 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8238 4500 50  0001 C CNN
 F 3 "~" H 8200 4650 50  0001 C CNN
+F 4 "C57112" H 0   0   50  0001 C CNN "LCSC"
 	1    8200 4650
 	1    0    0    -1  
 $EndComp
@@ -411,7 +422,7 @@ U 1 1 5C490708
 P 7200 4450
 F 0 "J7" H 7306 4728 50  0000 C CNN
 F 1 "Conn_01x04_Male" H 7306 4637 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B4B-PH-K_1x04_P2.00mm_Vertical" H 7200 4450 50  0001 C CNN
+F 2 "conn:conn_1x04_1.5mm" H 7200 4450 50  0001 C CNN
 F 3 "~" H 7200 4450 50  0001 C CNN
 	1    7200 4450
 	1    0    0    -1  
@@ -431,7 +442,7 @@ Wire Wire Line
 Wire Wire Line
 	7400 4800 8200 4800
 $Comp
-L controlBoard_rev0401-rescue:coin_cell-powerReg U7
+L controlBoard_rev05a-rescue:coin_cell-powerReg-controlBoard_rev0401-rescue U7
 U 1 1 5C54CFE2
 P 3450 2150
 F 0 "U7" H 3600 2203 60  0000 L CNN

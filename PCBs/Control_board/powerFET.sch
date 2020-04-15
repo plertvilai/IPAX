@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:controlBoard_rev0401-cache
+LIBS:controlBoard_rev05a-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -28,6 +28,7 @@ F 0 "R4" V 4330 4100 50  0000 C CNN
 F 1 "400R" V 4250 4100 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4180 4100 50  0001 C CNN
 F 3 "" H 4250 4100 50  0000 C CNN
+F 4 "C23193" H 0   0   50  0001 C CNN "LCSC"
 	1    4250 4100
 	0    1    1    0   
 $EndComp
@@ -43,6 +44,7 @@ F 0 "R6" V 4930 3250 50  0000 C CNN
 F 1 "10k" V 4850 3250 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4780 3250 50  0001 C CNN
 F 3 "" H 4850 3250 50  0000 C CNN
+F 4 "C25804" H 0   0   50  0001 C CNN "LCSC"
 	1    4850 3250
 	0    1    1    0   
 $EndComp
@@ -82,6 +84,7 @@ F 0 "Q2" H 5105 4146 50  0000 L CNN
 F 1 "Q_NMOS_GSD" H 5105 4055 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 5100 4200 50  0001 C CNN
 F 3 "~" H 4900 4100 50  0001 C CNN
+F 4 "C382335" H 0   0   50  0001 C CNN "LCSC"
 	1    4900 4100
 	1    0    0    -1  
 $EndComp

@@ -1,10 +1,6 @@
-update=3/17/2020 10:10:59 AM
+update=4/6/2020 2:42:27 PM
 version=1
 last_client=kicad
-[general]
-version=1
-RootSch=
-BoardNm=
 [pcbnew]
 version=1
 LastNetListRead=
@@ -27,10 +23,11 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
-[eeschema/libraries]
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
@@ -39,5 +36,5 @@ SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=
 SpiceAjustPassiveValues=0
-LabSize=50
+LabSize=98
 ERC_TestSimilarLabels=1

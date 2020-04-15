@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name controlBoard_rev0401-rescue)(type Legacy)(uri ${KIPRJMOD}/controlBoard_rev0401-rescue.lib)(options "")(descr ""))
+  (lib (name controlBoard_rev05a-rescue)(type Legacy)(uri ${KIPRJMOD}/controlBoard_rev05a-rescue.lib)(options "")(descr ""))
 )
