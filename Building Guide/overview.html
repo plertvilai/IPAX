@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IPAX: OVerview</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
+      
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="fa-code-branch"> 
+    
+</head> 
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">IPAX </span><span class="text-bold">Documentation</span>
+                        </a>
+                    </h1>
+                    
+                </div><!--//branding-->
+                
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Overview</li>
+                </ol>
+                
+                <div class="top-search-box">
+	                 <form class="form-inline search-form justify-content-center" action="" method="get">
+	            
+			            <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+			            
+			            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+			            
+			        </form>
+                </div>
+                
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-code-branch"></i> Overview</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: April, 2020</div>
+                </div><!--//doc-header-->
+
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+
+                            <section id="overview-section" class="doc-section">
+                                <h2 class="section-title">Production Steps</h2>
+
+                                
+                                <div class="section-block">
+                                    <p>This section outlines the production process of the IPAX. Though not necessarily needed to be done in this particular order, we recommend users to build an IPAX in the step as shown in the diagram below. This page provides steps for assembly process, but the detail of each step can be found in the respective page. 
+                                    </p>
+
+                                    <img class="img-fluid" src="assets/images/production_01.png" alt="screenshot" width="500"/>
+                                </div>
+                            </section><!--//doc-section-->
+
+
+                            <section id="procurement-section" class="doc-section">
+                                <h2 class="section-title">1. Procurement</h2>
+                                <div id="step1"  class="section-block">
+                                    
+                                    <p>
+                                        The entire bill of materials for the IPAX is provided in the BOM folder. The BOM also indicates recommended vendors, though users can procure their components through any vendors. 
+                                    </p>
+                            </section><!--//doc-section-->
+                            
+                            <section id="pcb-section" class="doc-section">
+                                <h2 class="section-title">2. Printed Circuit Boards</h2>
+                                <div class="section-block">
+                                    <p>
+                                        There are 3 printed circuit boards in the IPAX that need to be fabricated. The KiCAD files for all three boards are available in the PCBs folder. In each folder for each PCB, there is a folder called "Gerber" that contains gerber files that are ready to be sent to a PCB house for fabrication.
+                                    </p>
+
+                                    <p>
+                                        The control board and the power regulator boards can be fabricated with regular FR-4 substrate, but we strongly recommend that the LED array board should be fabricated with aluminum substrate to help with heat sink. 
+                                    </p>
+
+                                   
+
+                                    <div class="screenshot-holder">
+                                                <a href="assets/images/demo/appify-dashboard-1.jpg" data-title="All PCBs for the IPAX" data-toggle="lightbox"><img class="img-fluid" src="assets/images/pcbs_01.png" alt="screenshot" width="250" /></a>
+                                                <a class="mask" href="assets/images/pcbs_01.png" data-title="All PCBs for the IPAX" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                    </div> 
+
+                                    <p>
+                                        *There is an optional 4th board called "optics holder" that is not required, but we recommend if users plan to use the IPAX for an application that requires the LED to be on for an extended period of time. This board mainly helps attach the LED array board to the aluminum flange of the housing. It will help dissipate heat from the LEDs out very quickly. However, if heating is not a problem, it can be replaced with a simple 3D printed part. 
+                                    </p>
+
+                                    <p>
+                                        **Another optinal PCB is an SD card add-on, which will be deprecated and added directly to the control board in future revisions. However, for now, it provides the control board with an access to an SD card without the need to turn the Pi on. The SD card can be used to store environmental data and also to store configuration files.
+                                    </p>
+                                             
+                                </div><!--//section-block-->
+                                
+                                
+                            </section><!--//doc-section-->
+                            
+                            <section id="procurement-section" class="doc-section">
+                                <h2 class="section-title">3. 3D Printed Parts</h2>
+                                <div id="step1"  class="section-block">
+                                    
+                                    <p>
+                                        There are 3 components that need to be printed out using an FDM 3D printer. The STEP files of all three components are provided in Mechanical folder, along with the STEP file for the entire assembly. Note that we use Fusion 360 as the CAD software, so there might be some issues if the files are opened with other software. 
+                                    </p>
+
+                                    <p>
+                                        There are no special requirements for all these 3D printed parts. We use PLA material to print all of them. Note that the two battery holders shown in the picture below are identical.
+                                    </p>
+
+                                    <div class="screenshot-holder">
+                                                <a href="assets/images/demo/appify-dashboard-1.jpg" data-title="3D Printed Parts" data-toggle="lightbox"><img class="img-fluid" src="assets/images/mechanical_01.png" alt="screenshot" width="500" /></a>
+                                                <a class="mask" href="assets/images/mechanical_01.png" data-title="3D Printed Parts" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                    </div> 
+
+                                    <p>
+                                        *Optics holder can be replaced with an aluminum PCB for better heat dissipation. 
+                                    </p>
+                            </section><!--//doc-section-->
+
+                            <section id="procurement-section" class="doc-section">
+                                <h2 class="section-title">4. LED and Camera Assembly</h2>
+                                <div id="step1"  class="section-block">
+                                    
+                                    <p>
+                                        The LED board and the Arducam camera board can be attached to the optics holder PCB (or 3D printed part) using a set of M3 screws and standoffs as shown in the image below. The assembly can then be attached to the aluminum flange using a set screw and a screw. 
+                                    </p>
+
+                                    <p>
+                                        Note that depending on the M12 lens, the position of the camera might need to be adjusted. The provided files are suitable for M12 lens with focal length no longer than 16mm; otherwise, the lens would be too long to fit inside the housing. The lens should be almost flat on top of the acrylic viewport to prevent the LED light from reflecting back into the camera lens. 
+                                    </p>
+
+                                    <div class="screenshot-holder">
+                                                <a href="assets/images/demo/appify-dashboard-1.jpg" data-title="Optics Assembly" data-toggle="lightbox"><img class="img-fluid" src="assets/images/optics_01.png" alt="screenshot" width="700" /></a>
+                                                <a class="mask" href="assets/images/optics_01.png" data-title="Optics Assembly" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                    </div> 
+                            </section><!--//doc-section-->
+
+                            <section id="procurement-section" class="doc-section">
+                                <h2 class="section-title">5. PCB Tray Assembly</h2>
+                                <div id="step1"  class="section-block">
+                                    
+                                    <p>
+                                        The Pi Zero W can be attached to the 3D printed PCB tray with a set of M2.5 standoffs (M3 does not fit through the holes on the Pi zero board). Note that this is the only place where M2.5 screws are used; the rest of the system uses M3 only.
+                                    </p>
+
+                                    <p>
+                                        The control board is attached directly on top of the Pi with the 40-pin GPIO headers. The power regulator board is attached to the other side of the PCB tray. Then, the entire tray is attached to the flange. Note that the bottom of the tray (the power regulator side) can be reinforced with 87mm M3 standoff (combination of multiple standoffs).
+                                    </p>
+
+                                    <div class="screenshot-holder">
+                                                <a href="assets/images/demo/appify-dashboard-1.jpg" data-title="PCB Tray Assembly" data-toggle="lightbox"><img class="img-fluid" src="assets/images/pcb_tray_assembly.png" alt="screenshot" width="700" /></a>
+                                                <a class="mask" href="assets/images/pcb_tray_assembly.png" data-title="PCB Tray Assembly" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                    </div> 
+                            </section><!--//doc-section-->
+
+                            <section id="procurement-section" class="doc-section">
+                                <h2 class="section-title">6. Battery and End Cap Assembly</h2>
+                                <div id="step1"  class="section-block">
+                                    
+                                    <p>
+                                        The battery used in this tutorial is Tenergy 31019. Other batteries will work as well, but users need to modify the 3D file for the battery holder. 
+                                    </p>
+
+                                    <div class="screenshot-holder">
+                                                <a href="assets/images/demo/appify-dashboard-1.jpg" data-title="Battery Assembly" data-toggle="lightbox"><img class="img-fluid" src="assets/images/battery_assembly.png" alt="screenshot" width="700" /></a>
+                                                <a class="mask" href="assets/images/battery_assembly.png" data-title="Battery Assembly" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                    </div> 
+
+                                    <p>
+                                        The endcap requires at least two switches: one for main power and the other for shutdown signal. The environmental sensors are optional and can be replaced with blank screws. All wire-to-wire connections are done with Molex Minifit connectors. 
+                                    </p>
+
+                                    <p>
+                                        Note that we do not recommend Blueorobotics vent plug, and its function can be done through a switch instead. See <a class="link" href="programming.html">mechanical section</a> for more information.
+                                    </p>
+
+                                    <div class="screenshot-holder">
+                                                <a href="assets/images/demo/appify-dashboard-1.jpg" data-title="Endcap Assembly" data-toggle="lightbox"><img class="img-fluid" src="assets/images/endcap_assembly.png" alt="screenshot" width="700" /></a>
+                                                <a class="mask" href="assets/images/endcap_assembly.png" data-title="Endcap Assembly" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                    </div> 
+
+                                    <p>
+                                        Here is the fully assembled internal parts of the IPAX.
+                                    </p>
+
+                                    <div class="screenshot-holder">
+                                                <a href="assets/images/demo/appify-dashboard-1.jpg" data-title="Internal Assembly" data-toggle="lightbox"><img class="img-fluid" src="assets/images/internal_assembly.png" alt="screenshot" width="700" /></a>
+                                                <a class="mask" href="assets/images/internal_assembly.png" data-title="Internal Assembly" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                    </div> 
+
+                            </section><!--//doc-section-->
+
+                            <section id="procurement-section" class="doc-section">
+                                <h2 class="section-title">7. Programming</h2>
+                                <div id="step1"  class="section-block">
+                                    
+                                    <p>
+                                        Programming on the control board is done with Arduino platform and on the Pi Zero W is done with Python. The detail can be found on <a class="link" href="programming.html">programming section</a>.
+                                    </p>
+                            </section><!--//doc-section-->
+                            
+                            
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+        
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>      
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                              
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
+<!--
+    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+                            
+                                <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                    <a class="nav-link scrollto" href="#download-section">Download</a>
+                                    <a class="nav-link scrollto" href="#installation-section">Installation</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#step1">Step One</a>
+                                        <a class="nav-link scrollto" href="#step2">Step Two</a>
+                                        <a class="nav-link scrollto" href="#step3">Step Three</a>
+                                    </nav>
+                                    <a class="nav-link scrollto" href="#code-section">Code</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#html">HTML</a>
+                                        <a class="nav-link scrollto" href="#css">CSS</a>
+                                        <a class="nav-link scrollto" href="#sass">Sass</a>
+                                        <a class="nav-link scrollto" href="#less">LESS</a>
+                                        <a class="nav-link scrollto" href="#javascript">JavaScript</a>
+                                        <a class="nav-link scrollto" href="#python">Python</a>
+                                        <a class="nav-link scrollto" href="#php">PHP</a>
+                                        <a class="nav-link scrollto" href="#handlebars">Handlebars</a>
+                                    </nav>
+                                    <a class="nav-link scrollto" href="#callouts-section">Callouts</a>
+                                    <a class="nav-link scrollto" href="#tables-section">Tables</a>
+                                    <a class="nav-link scrollto" href="#buttons-section">Buttons</a>
+                                    <a class="nav-link scrollto" href="#video-section">Video</a>
+                                    <a class="nav-link scrollto" href="#icons-section">Icons</a>
+                                </nav>
+                            
+                        </div> 
+-->

@@ -1,0 +1,120 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# Connector:Conn_01x01_Female
+#
+DEF Connector:Conn_01x01_Female J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector:Conn_01x01_Female" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*
+$ENDFPLIST
+DRAW
+A 0 0 20 901 -901 1 1 6 N 0 20 0 -20
+P 2 1 1 6 -50 0 -20 0 N
+X Pin_1 1 -200 0 150 R 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector:Conn_01x01_Male
+#
+DEF Connector:Conn_01x01_Male J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector:Conn_01x01_Male" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*
+$ENDFPLIST
+DRAW
+S 34 5 0 -5 1 1 6 F
+P 2 1 1 6 50 0 34 0 N
+X Pin_1 1 200 0 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device:C
+#
+DEF Device:C C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "Device:C" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device:R
+#
+DEF Device:R R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "Device:R" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Mechanical:Heatsink_Pad
+#
+DEF Mechanical:Heatsink_Pad HS 0 0 Y Y 1 F N
+F0 "HS" 0 225 50 H V C CNN
+F1 "Mechanical:Heatsink_Pad" 0 150 50 H V C CNN
+F2 "" 12 -50 50 H I C CNN
+F3 "" 12 -50 50 H I C CNN
+DRAW
+P 10 0 1 10 -13 0 -38 0 -38 100 -63 100 -63 0 -88 0 -88 100 -113 100 -113 -50 -38 -50 f
+P 13 0 1 10 -13 0 -13 100 12 100 12 0 37 0 37 100 62 100 62 0 87 0 87 100 112 100 112 -50 -38 -50 f
+X ~ 1 0 -100 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power:GND
+#
+DEF power:GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power:GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# sensors:MCP9808
+#
+DEF sensors:MCP9808 U 0 40 Y Y 1 F N
+F0 "U" 0 -100 50 H V C CNN
+F1 "sensors:MCP9808" 0 100 50 H V C CNN
+F2 "MODULE" 0 0 50 H I C CNN
+F3 "DOCUMENTATION" 0 0 50 H I C CNN
+DRAW
+S -450 -350 450 350 1 0 0 N
+X SDA 1 -750 150 300 R 50 50 1 1 I
+X SCL 2 -750 50 300 R 50 50 1 1 I
+X ALERT 3 -750 -50 300 R 50 50 1 1 I
+X GND 4 -750 -150 300 R 50 50 1 1 I
+X A2 5 750 -150 300 L 50 50 1 1 I
+X A1 6 750 -50 300 L 50 50 1 1 I
+X A0 7 750 50 300 L 50 50 1 1 I
+X Vdd 8 750 150 300 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IPAX: Programming</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
+      
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="fa-code-branch"> 
+    
+</head> 
+
+<body class="body-purple">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">IPAX </span><span class="text-bold">Documentation</span>
+                        </a>
+                    </h1>
+                    
+                </div><!--//branding-->
+                
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Programming</li>
+                </ol>
+                
+                <div class="top-search-box">
+	                 <form class="form-inline search-form justify-content-center" action="" method="get">
+	            
+			            <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+			            
+			            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+			            
+			        </form>
+                </div>
+                
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-code-branch"></i> Programming</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: March, 2020</div>
+                </div><!--//doc-header-->
+
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+
+                            <section id="overview-section" class="doc-section">
+                                <h2 class="section-title">Overview</h2>
+
+                                <img class="img-fluid" src="assets/images/programming_overview.png" alt="screenshot" width="500"/>
+                                <div class="section-block">
+                                    <p>The programming for the IPAX is done on the control board and the Raspberry Pi. The control board is used to perform time keeping and interact with environmental sensor. It communicates with the Pi using Serial communication. The Pi is used to control camera for image acquisition and also to trigger the LED for flashing.
+                                    </p>
+                                </div>
+                            </section><!--//doc-section-->
+
+
+                            <section id="installation-section" class="doc-section">
+                                <h2 class="section-title">Control Board Programming</h2>
+                                <div id="step1"  class="section-block">
+                                    <h3 class="block-title">Arduino Setup</h3>
+                                    <p>The control board is based on ATMega328p chip that is arduino-compatible. The guide will assume that users are familiar with Arduino platform for programming. There are many online tutorials on the basic of Arduino IDE, and users can download the platform directly from the <a href="https://www.arduino.cc/">official website</a>.
+                                    </p>
+
+                                    <p>
+                                        This control board is modeled after Arduino Pro Mini 3.3V 8MHz, so make sure that the Arduino IDE is set accordingly. However, advanced users can set the chip to any configurations. We need to use Upload Using Programmer option when uploading the program with an ISP programmer.
+                                    </p>
+
+                                    <img class="img-fluid" src="assets/images/arduino_setup_01.png" alt="screenshot" width="700"/>
+
+                                    <p>
+                                        To program, we need to have an ISP programmer, which is commercially available. We recommend using <a href="https://www.pololu.com/product/3172">Pololu USB programmer</a>, though any ISP programmer will work well. There is also a UART header available on the control board for basic debugging through USB serial. 
+                                    </p>
+                                    <div class="screenshot-holder">
+                                                <a href="assets/images/demo/appify-dashboard-1.jpg" data-title="Programming Headers for the Control Board" data-toggle="lightbox"><img class="img-fluid" src="assets/images/arduino_setup_02.png" alt="screenshot" /></a>
+                                                <a class="mask" href="assets/images/arduino_setup_02.png" data-title="Programming Headers for the Control Board" data-toggle="lightbox"><i class="icon fa fa-search-plus"></i></a>
+                                    </div> 
+
+                                    <h3 class="block-title">Arduino Programming</h3>
+                                    <p>
+                                        Two Arduino skecthes are available on the IPAX github page. There are a few Arduino libraries that we need to install for the code to properly work. Note that library #3-5 are optional and are only needed if there are actual sensors attached to the instrument.
+                                        <ol>
+                                            <li>DS3232RTC for real-time clock</li>
+                                            <li>LowPower for sleep mode</li>
+                                            <li>SparkFunBME280 for on-board BME280 sensor</li> 
+                                            <li>MS5837 for Bluerobotics pressure sensor</li>
+                                            <li>TSYS01 for Bluerobotics temperature sensor</li>
+                                        </ol>
+                                        Upload the script to the control board and then check on the serial monitor. The output should be similar to what shown below. Make sure the baud rate is set to 9600. The output on the fourth line indicates the time of the system. If that number is incorrect, then we have to set the RTC. 
+                                    </p>
+                                    
+                                    <img class="img-fluid" src="assets/images/arduino_setup_03.png" alt="screenshot" width="500"/>
+                            </section><!--//doc-section-->
+                            
+                            <section id="pi-section" class="doc-section">
+                                <h2 class="section-title">Raspberry Pi</h2>
+                                <div class="section-block">
+                                    <h3 class="block-title">Raspberry Pi Setup</h3>
+                                    <p>
+                                        Again, users are assumed to be familiar with Raspberry Pi basic. There are many helpful tutorials available online to get started with Raspberry Pi, such as this <a href="https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started">official tutorial</a>. 
+                                    </p>
+
+                                    <p>
+                                        In addition to the basic Pi setup, users also need to setup hardware trigger for flash. The instruction can be found on <a href="https://picamera.readthedocs.io/en/release-1.13/recipes2.html#using-a-flash-with-the-camera">the official camera documentation</a>. For simplicity, we provide the files dt-blob.dts, dt-blob.bin and confix.txt that will work with a Pi Zero W and the flash pin on the control board. 
+                                    </p>
+
+                                    <p>
+                                        We also recommend setting up the Pi Zero as a headless computer, so it can be easily communicated with through a USB cable. The instruction can be found <a href="https://desertbot.io/blog/headless-pi-zero-ssh-access-over-usb-windows">here</a>
+                                    </p>
+
+                                    <h3 class="block-title">IPAX Library</h3>
+                                    <p>
+                                        The IPAX library, provided as ipaxClass.py, can be used to write a routine on the Pi to perform image acquisition. Two python scripts are provided for testing and for simple deployment. The code can be modified to suit the experimental needs. 
+                                    </p>
+                                             
+                                </div><!--//section-block-->
+                                
+                                
+                            </section><!--//doc-section-->
+                            
+                            
+                            
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+        
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>      
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                              
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
+<!--
+    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+                            
+                                <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                    <a class="nav-link scrollto" href="#download-section">Download</a>
+                                    <a class="nav-link scrollto" href="#installation-section">Installation</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#step1">Step One</a>
+                                        <a class="nav-link scrollto" href="#step2">Step Two</a>
+                                        <a class="nav-link scrollto" href="#step3">Step Three</a>
+                                    </nav>
+                                    <a class="nav-link scrollto" href="#code-section">Code</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#html">HTML</a>
+                                        <a class="nav-link scrollto" href="#css">CSS</a>
+                                        <a class="nav-link scrollto" href="#sass">Sass</a>
+                                        <a class="nav-link scrollto" href="#less">LESS</a>
+                                        <a class="nav-link scrollto" href="#javascript">JavaScript</a>
+                                        <a class="nav-link scrollto" href="#python">Python</a>
+                                        <a class="nav-link scrollto" href="#php">PHP</a>
+                                        <a class="nav-link scrollto" href="#handlebars">Handlebars</a>
+                                    </nav>
+                                    <a class="nav-link scrollto" href="#callouts-section">Callouts</a>
+                                    <a class="nav-link scrollto" href="#tables-section">Tables</a>
+                                    <a class="nav-link scrollto" href="#buttons-section">Buttons</a>
+                                    <a class="nav-link scrollto" href="#video-section">Video</a>
+                                    <a class="nav-link scrollto" href="#icons-section">Icons</a>
+                                </nav>
+                            
+                        </div> 
+-->

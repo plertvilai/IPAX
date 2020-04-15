@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IPAX: Imaging</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/lightbox/dist/ekko-lightbox.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
+      
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="fa-code-branch"> 
+    
+</head> 
+
+<body class="body-blue">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <span aria-hidden="true" class="icon_documents_alt icon"></span>
+                            <span class="text-highlight">IPAX </span><span class="text-bold">Documentation</span>
+                        </a>
+                    </h1>
+                    
+                </div><!--//branding-->
+                
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Imaging</li>
+                </ol>
+                
+                <div class="top-search-box">
+	                 <form class="form-inline search-form justify-content-center" action="" method="get">
+	            
+			            <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+			            
+			            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+			            
+			        </form>
+                </div>
+                
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-code-branch"></i> Imaging</h1>
+                    <div class="meta"><i class="far fa-clock"></i> Last updated: April, 2020</div>
+                </div><!--//doc-header-->
+
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+
+                            <section id="illumination-section" class="doc-section">
+                                <h2 class="section-title">Illumination</h2>
+                                <img src="assets/images/optics_overview.PNG" style="width:70%;" class="w3-round">
+                                <p>
+                                    IPAX uses ten CREE XPE2 LEDs for illumination. There are two main colors used for deployment, far red and white. Please consult the official datasheet linked below for full detail of the LEDs. The spectrum plots of XPE2 from the datasheet is shown here as a reference.
+                                </p>
+                                <p>
+                                    In addition to the LEDs, IPAX also uses secondary optics to focus light from the LEDs. The optics used here is Carclo 10.0mm Narrow Spot Lens (P/N 10412)
+                                </p>
+                                <p>
+                                    <a href="https://www.cree.com/led-components/media/documents/XLampXPE2.pdf" class="btn btn-green btn-cta"><i class="fas fa-download"></i> CREE XPE2 Datasheet</a>
+                                    <a href="http://www.carclo-optics.com/optic-10412?ledmanufacturer=cree&ledfamily=xp-e2" class="btn btn-green btn-cta"><i class="fas fa-download"></i> Carclo Lens Datasheet</a>
+                                </p>
+                                <img src="assets/images/xpe2_spectrum.PNG" style="width:50%;" class="w3-round">
+                                <div id="div-led-driver"  class="section-block">
+                                    <h3 class="block-title">LED Driver Circuit</h3>
+                                    <p>
+                                        The LED driver circuit is a part of the power control board. The schematic of the driver is shown below.
+                                    </p>
+                                    <img src="assets/images/led_driver.PNG" style="width:80%;" class="w3-round">
+                                    <p>
+                                        There are two modes for illumination: (1) torch mode and (2) flash mode. Torch mode is simple control where the LEDs are always on or off without duty cycle. In this mode, the LEDs are driven by a constant current source diode (D3: NS1450 in this case). The LEDs stay pretty dim in this mode, so the board does not get overheat or consume too much power. 
+                                    </p>
+                                    <p>
+                                        Flash mode is controlled by the triggering signal from IMX219. Once the trigger signal is high, the LEDs rapidly draw power from two large alumninum electrolytic capacitors (C1 and C2) to generate light. These capacitors help supply burst of current withouth straining the batteries and also generating more illumination in short period of time. Note that the Flash trigger should not be left ON for a prolonged period of time as it essentially shorts the LEDs drawing a lot of power and producing a lot of heat.
+                                    </p>
+                                    
+                                </div><!--//section-block-->
+
+                                <div id="div-led-temp"  class="section-block">
+                                    <h3 class="block-title">LED Temperature</h3>
+                                    <p>
+                                        The PCB for the LED has aluminum substrate to help dissipate heat from each LED to the surrounding. The test shows that the temperature of the LED board is slightly elevated but is never high enough to cause trouble. The IPAX has a capability of adding an additional fan to help dissipate heat if the heat from the LEDs becomes a problem.
+                                    </p>
+                                    <img src="assets/images/led_temp.PNG" style="width:50%;" class="w3-round">
+                                    
+                                </div><!--//section-block-->
+
+
+                            </section><!--//doc-section-->
+
+
+                            <section id="flash-section" class="doc-section">
+                                <h2 class="section-title">Pi Camera Flash</h2>
+                                <p>The RPi camera comes with an unconventional way of trigerring. It does not accept external hardware triggering, but it does output a trigerring signal for external flash. The method is outlined very well in the <a href="https://picamera.readthedocs.io/en/release-1.13/recipes2.html#using-a-flash-with-the-camera">official documentaiton</a>. The setup can be done very easily by following the steps in the documentation. To make things easier, here is the dts-blob.bin files for IPAX. <a href="ipaxFiles/dt-blob.bin" class="btn btn-green btn-cta"><i class="fas fa-download"></i> dt-blob.bin</a></p>
+                                <div id="div-flash-overview"  class="section-block">
+                                    <h3 class="block-title">Flash Trigger Overview</h3>
+                                    <p>
+                                        The Pi camera sensor does not actually send out a trigger for external flash hardware. However, it sends out signal of when a frame capture begins and ends. For more detail, please visit the <a href="https://picamera.readthedocs.io/en/latest/fov.html#theory-of-operation">official documentaiton</a>, especially, see Misconception #2. As a result, the flash trigger from the Pi camera is always at the start and end of the frame acquisition, resulting in a constant flash duration of fps/2. The brightness of the image is then controlled by the actual exposure time of the camera instead of the flash duration (unlike other microscopes controlled by Nvidia Jetson).
+                                    </p>
+                                    <p>
+                                        Here is the test of flash duration with different exposure time and fps setting. It can be seen that the exposure time of the camera does not affect the flash duration, but the fps setting does.
+                                    </p>
+                                    <img src="assets/images/flash_duration.PNG" style="width:80%;" class="w3-round">
+                                </div><!--//section-block-->
+
+                                <div id="div-flash-still"  class="section-block">
+                                    <h3 class="block-title">Still Capture Flash</h3>
+                                    <p>
+                                        The flash mode is set by the parameter <code>disable_camera_led</code> in <code>/boot/config.txt</code>. Please consult this <a href="https://www.raspberrypi.org/forums/viewtopic.php?t=190314">forum</a> for the full description of values.  
+                                    </p>
+                                    <p>
+                                        For still picture capturing, we use <code>disable_camera_led=1</code>, and then set <code> camera.flash_mode = 'on'</code> in the python implementation. 
+                                    </p>
+                                    <p>
+                                        Using this flash mode, the camera will only flash twice for a single image acquisition. One before the actual acquisition and one during the acquisition. See the previous plot for detail.
+                                    </p>
+                                    
+                                </div><!--//section-block-->
+
+                                <div id="div-flash-video"  class="section-block">
+                                    <h3 class="block-title">Video Flash</h3>
+                                    <p>
+                                        The flash mode for still images does not work on video capturing. The flash will simply not turn on at all when the camera is streaming the video. As a result, we need to work around this by setting <code>disable_camera_led=3</code>. With this setting, the flash is triggered every frame. 
+                                    </p>
+                                    <p>
+                                        However, we cannot turn the flash off by this trigger alone when the camera is on. As a result, we need to add another flash controller. In IPAX, the flash trigger from the sensor control the high side of the LEDs, and another GPIO pin is used to control the low side of the LED to help conserve energy. 
+                                    </p>
+                                    <img src="assets/images/video_flash.PNG" style="width:80%;" class="w3-round">
+                                </div><!--//section-block-->
+
+                            </section><!--//doc-section-->
+
+                            
+                            
+                            
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+        
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>  
+    <script type="text/javascript" src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script>      
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                              
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
+<!--
+    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+                            
+                                <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+                                    <a class="nav-link scrollto" href="#download-section">Download</a>
+                                    <a class="nav-link scrollto" href="#installation-section">Installation</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#step1">Step One</a>
+                                        <a class="nav-link scrollto" href="#step2">Step Two</a>
+                                        <a class="nav-link scrollto" href="#step3">Step Three</a>
+                                    </nav>
+                                    <a class="nav-link scrollto" href="#code-section">Code</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#html">HTML</a>
+                                        <a class="nav-link scrollto" href="#css">CSS</a>
+                                        <a class="nav-link scrollto" href="#sass">Sass</a>
+                                        <a class="nav-link scrollto" href="#less">LESS</a>
+                                        <a class="nav-link scrollto" href="#javascript">JavaScript</a>
+                                        <a class="nav-link scrollto" href="#python">Python</a>
+                                        <a class="nav-link scrollto" href="#php">PHP</a>
+                                        <a class="nav-link scrollto" href="#handlebars">Handlebars</a>
+                                    </nav>
+                                    <a class="nav-link scrollto" href="#callouts-section">Callouts</a>
+                                    <a class="nav-link scrollto" href="#tables-section">Tables</a>
+                                    <a class="nav-link scrollto" href="#buttons-section">Buttons</a>
+                                    <a class="nav-link scrollto" href="#video-section">Video</a>
+                                    <a class="nav-link scrollto" href="#icons-section">Icons</a>
+                                </nav>
+                            
+                        </div> 
+-->
