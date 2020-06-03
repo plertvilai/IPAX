@@ -1,5 +1,5 @@
 # In Situ Plankton Assemblage eXplorer
-![Image of IPAX](https://github.com/plertvilai/IPAX/ipax_full_assembly.png)
+![Image of IPAX](ipax_full_assembly.png)
 
 This Github repository contains all information necessary to build the In Situ Plankton Assemblage eXplorer (IPAX). Here is a brief introduction to how to utilize the repository. 
 
